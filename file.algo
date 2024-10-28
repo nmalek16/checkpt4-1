@@ -1,0 +1,47 @@
+the Algorithm Steps:
+    step 1 : Input: A sentence that ends with a (.).
+    step 2 : Initialization: We initialize three counters:
+         length: Counts the total number of characters (excluding the period).
+         words: Counts the number of words.
+         vowels: Counts the number of vowels.
+    step 3 : Loop: We loop through each character in the sentence.
+        Period (.) Check: If the character is a period, the loop breaks.
+        Length Counting: For every character, we increment the length.
+        Vowel Counting: We check if the character is a vowel and increment the vowels counter if it is.
+        Word Counting: We count words when a space is followed by a non-space character or when it's the first character.
+    step 4 : Output: Finally, the results (length, words, and vowels) are displayed.
+
+
+PsedoCode : 
+Algorithm Sentence
+    Input: A sentence that ends with a period ('.')
+
+    // Initialize counters
+    length ← 0
+    words ← 0
+    vowels ← 0
+    
+    // Define vowel characters
+    vowelSet ← {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+    // Loop through each character in the sentence
+    For each character in the sentence Do
+        If character is '.' Then
+            // Stop when period is encountered
+            Break
+        // Increment length counter
+        Increment length by 1
+        // Check if the character is a vowel
+        If character is in vowelSet Then
+            Increment vowels by 1
+        // Check if the character is a space or if it is the first character
+        If character is a space and the next character is not a space Then
+            Increment words by 1
+        Else If length = 1 Then
+            // If it is the first character, start the word count
+            Increment words by 1
+    End For
+    // Output the results
+    Output "Length of sentence: " length
+    Output "Number of words: "  words
+    Output "Number of vowels: " vowels
+End Algorithm
